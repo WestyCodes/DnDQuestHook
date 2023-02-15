@@ -1,5 +1,5 @@
 {
-    "broad-locations":[
+    "broadLocations": [
         {
             "id": 1,
             "title": "In the Dragonspine Cliffs"
@@ -9,7 +9,8 @@
             "title": "In the Mournful Woodlands"
         }
     ],
-    "races":[
+
+    "races": [
         {
             "id": 1,
             "title": "Dwarves"
@@ -19,7 +20,8 @@
             "title": "Humans"
         }
     ],
-    "race-description":[
+
+    "raceDescription": [
         {
             "id": 1,
             "title": "jovial"
@@ -29,7 +31,8 @@
             "title": "dismissive"
         }
     ],
-    "culture-activity":[
+
+    "cultureActivity": [
         {
             "id": 1,
             "title": "pray"
@@ -39,7 +42,8 @@
             "title": "hunt"
         }
     ],
-    "activity-reason":[
+
+    "activityReason": [
         {
             "id": 1,
             "title": "for sport"
@@ -49,7 +53,8 @@
             "title": "to quell the rage of their gods"
         }
     ],
-    "specific-location-adjective":[
+
+    "specificLocationAdjective": [
         {
             "id": 1,
             "title": "dank"
@@ -59,7 +64,8 @@
             "title": "opulent"
         }
     ],
-    "specific-location": [
+
+    "specificLocation": [
         {
             "id": 1,
             "title": "cellar"
@@ -69,7 +75,8 @@
             "title": "castle"
         }
     ],
-    "specific-character-state": [
+
+    "specificCharacterState": [
         {
             "id": 1,
             "title": "hungover"
@@ -79,7 +86,8 @@
             "title": "alone"
         }
     ],
-    "task-action": [
+
+    "taskAction": [
         {
             "id": 1,
             "title": "find"
@@ -89,7 +97,8 @@
             "title": "save"
         }
     ],
-    "task-object": [
+
+    "taskObject": [
         {
             "id": 1,
             "title": "package"
@@ -99,7 +108,8 @@
             "title": "King of Frogs"
         }
     ],
-    "specific-goal-action": [
+
+    "specificGoalAction": [
         {
             "id": 1,
             "title": "access"
@@ -109,7 +119,8 @@
             "title": "appease"
         }
     ],
-    "specific-goal-object": [
+
+    "specificGoalObject": [
         {
             "id": 1,
             "title": "Great Library of Alexandria"
@@ -119,7 +130,8 @@
             "title": "your father"
         }
     ],
-    "obstacle-object": [
+
+    "obstacleObject": [
         {
             "id": 1,
             "title": "Thieve's guild"
@@ -129,13 +141,14 @@
             "title": "rightful heir"
         }
     ],
-    "obstacle-objects-motivation": [
+
+    "obstacleObjectsMotivation": [
         {
             "id": 1,
             "title": "ever be found"
         },
         {
-            "id": 2,
+            "id": 20,
             "title": "reveal their plan"
         }
     ]
