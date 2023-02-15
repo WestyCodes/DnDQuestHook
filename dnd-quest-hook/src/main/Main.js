@@ -1,4 +1,5 @@
 import { useState, useEffect } from 'react'
+import { getPrompts } from '../apiFunctions/apiFunctions'
 
 export default function Main() {
     const [broadLocations, setBroadLocations] = useState([])
@@ -16,106 +17,63 @@ export default function Main() {
     const [obstacleObject, setObstacleObject] = useState([])
     const [obstacleObjectsMotivation, setObstacleObjectsMotivation] = useState([])
 
+    const [loading, setIsLoading] = useState(true)
+
+    
+    async function promptsAPIReuqest() {
+        const broadLocs = await getPrompts("broadLocations")
+        setBroadLocations(broadLocs)
+        const race = await getPrompts("races")
+        setRaces(race)
+        const raceDesc = await getPrompts("raceDescription")
+        setRaceDescription(raceDesc)
+        const cultActi = await getPrompts("cultureActivity")
+        setCultureActivity(cultActi)
+        const actiRea = await getPrompts("activityReason")
+        setActivityReason(actiRea)
+        const speciLocAdj = await getPrompts("specificLocationAdjective")
+        setSpecificLocationAdjective(speciLocAdj)
+        const speciLoc = await getPrompts("specificLocation")
+        setSpecificLocation(speciLoc)
+        const speciCharState = await getPrompts("specificCharacterState")
+        setSpecificCharacterState(speciCharState)
+        const taskAct = await getPrompts("taskAction")
+        setTaskAction(taskAct)
+        const taskObj = await getPrompts("taskObject")
+        setTaskObject(taskObj)
+        const speciGoalAct = await getPrompts("specificGoalAction")
+        setSpecificGoalAction(speciGoalAct)
+        const speciGoalObj = await getPrompts("specificGoalObject")
+        setSpecificGoalObject(speciGoalObj)
+        const obstObj = await getPrompts("obstacleObject")
+        setObstacleObject(obstObj)
+        const obsObjMoti = await getPrompts("obstacleObjectsMotivation")
+        setObstacleObjectsMotivation(obsObjMoti)
+    }
+
 
     useEffect(() => {
-
-        fetch("http://localhost:3000/broadLocations/")
-        .then((res) => res.json())
-        .then((data) => {
-            setBroadLocations(data)
-        })
-
-        fetch("http://localhost:3000/races/")
-        .then((res) => res.json())
-        .then((data) => {
-            setRaces(data)
-        })
-
-        fetch("http://localhost:3000/raceDescription/")
-        .then((res) => res.json())
-        .then((data) => {
-            setRaceDescription(data)
-        })
-
-        fetch("http://localhost:3000/cultureActivity/")
-        .then((res) => res.json())
-        .then((data) => {
-            setCultureActivity(data)
-        })
-
-        fetch("http://localhost:3000/activityReason/")
-        .then((res) => res.json())
-        .then((data) => {
-            setActivityReason(data)
-        })
-
-        fetch("http://localhost:3000/specificLocationAdjective/")
-        .then((res) => res.json())
-        .then((data) => {
-            setSpecificLocationAdjective(data)
-        })
-
-        fetch("http://localhost:3000/specificLocation/")
-        .then((res) => res.json())
-        .then((data) => {
-            setSpecificLocation(data)
-        })
-
-        fetch("http://localhost:3000/specificCharacterState/")
-        .then((res) => res.json())
-        .then((data) => {
-            setSpecificCharacterState(data)
-        })
-
-        fetch("http://localhost:3000/taskAction/")
-        .then((res) => res.json())
-        .then((data) => {
-            setTaskAction(data)
-        })
-
-        fetch("http://localhost:3000/taskObject/")
-        .then((res) => res.json())
-        .then((data) => {
-            setTaskObject(data)
-        })
-
-        fetch("http://localhost:3000/specificGoalAction/")
-        .then((res) => res.json())
-        .then((data) => {
-            setSpecificGoalAction(data)
-        })
-
-        fetch("http://localhost:3000/specificGoalObject/")
-        .then((res) => res.json())
-        .then((data) => {
-            setSpecificGoalObject(data)
-        })
-
-        fetch("http://localhost:3000/obstacleObject/")
-        .then((res) => res.json())
-        .then((data) => {
-            setObstacleObject(data)
-        })
-
-        fetch("http://localhost:3000/obstacleObjectsMotivation/")
-        .then((res) => res.json())
-        .then((data) => {
-            setObstacleObjectsMotivation(data)
-        })
-
+        setIsLoading(true)
+        async function getMyPrompts() {
+            const res = await promptsAPIReuqest()
+            setIsLoading(false)
+            return res
+        }
+        getMyPrompts()
     }, [])
 
+
     return (
+
         <div>
             <p>This is the Main</p>
             <p>This is a test randomised Quest:</p>
-            <p>
+            {loading ? (<p>Loading...</p>) : (<p>
                 {broadLocations[0]?.title}, where {raceDescription[0]?.title} {races[0]?.title} {cultureActivity[0]?.title} {activityReason[0]?.title}, 
                 you find yourself in a {specificLocationAdjective[0]?.title} {specificLocation[0]?.title}, {specificCharacterState[0]?.title} and {specificCharacterState[0]?.title}. 
                 You must {taskAction[0]?.title} the {taskObject[0]?.title} in order to {specificGoalAction[0]?.title} {specificGoalObject[0]?.title}.
                 However, the {obstacleObject[0]?.title} would be opposed to the {taskObject[0]?.title} {obstacleObjectsMotivation[0]?.title}!
-            </p>
-            <p>why no work</p>
+            </p>)}
         </div>
     )
 }
