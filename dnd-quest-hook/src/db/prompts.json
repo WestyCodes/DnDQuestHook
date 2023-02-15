@@ -123,7 +123,7 @@
     "specificGoalObject": [
         {
             "id": 1,
-            "title": "Great Library of Alexandria"
+            "title": "the Great Library of Alexandria"
         },
         {
             "id": 2,
@@ -145,11 +145,11 @@
     "obstacleObjectsMotivation": [
         {
             "id": 1,
-            "title": "ever be found"
+            "title": "ever being found"
         },
         {
             "id": 20,
-            "title": "reveal their plan"
+            "title": "revealing their plan"
         }
     ]
 }
