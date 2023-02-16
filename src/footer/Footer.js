@@ -15,7 +15,7 @@ export default function Footer() {
                 <span>Inspired by </span>
                 <a className="no-deco" href='http://twitter.com/ryanjgrant' title='Ryan J. Grant @ryanjgrant'>Ryan</a>
                 <span> the creator of </span>
-                <a className="no-deco" href='https://whothefuckismydndcharacter.com/' title='Who The Fuck Is My DND Character'>WTFIMDC</a>
+                <a className="no-deco" href='https://whothefuckismydndcharacter.com/' title='Who The Fuck Is My DND Character'>WTFIMDNDC</a>
 
 
             </div>

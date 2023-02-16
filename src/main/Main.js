@@ -92,18 +92,21 @@ export default function Main() {
     return (
 
         <div className='mainWrapper'>
-            <h2>Dungeons and Dragons Random Quest Generator!</h2>
+            <div>
+                <h2>TTRPG Random Quest Prompt</h2>
+                <p>Get some <span className='italic'>inspiration</span> for your next adventure!</p>
+            </div>
             {loadQuest && (
                 <div className='questTextWrap'>
                     <p>
                         {questText.mainLocation}, where {questText.inhabitantsDescription} {questText.inhabitants} {questText.culture} {questText.cultureReason}, 
-                        you find yourself in a {questText.pcLocationAdj} {questText.pcLocation}, {questText.pcMood1} and {questText.pcMood2}. 
+                        you find yourself in {questText.pcLocationAdj} {questText.pcLocation}, {questText.pcMood1} and {questText.pcMood2}. 
                         You must {questText.questAction} the {questText.questObject} in order to {questText.goalAction} {questText.goalObject}.
                         However, the {questText.antagonistObject} would be opposed to the {questText.questObject} {questText.antagonistMotivation}!
                     </p>
                 </div>
             )}
-            {loadingAPI ? (<p className='loading'>Loading...</p>) : (<p onClick={(randomiseQuest)}>{loadQuest ? `That sucks... do it again!`: `Generate Me A Quest!`}</p>)}
+            {loadingAPI ? (<p className='loading'>Loading...</p>) : (<button onClick={(randomiseQuest)}>{loadQuest ? `That sucks... do it again!`: `Generate Me A Quest!`}</button>)}
         </div>
     )
 }
