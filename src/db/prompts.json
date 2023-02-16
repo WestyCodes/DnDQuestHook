@@ -1,350 +1,388 @@
 {
-  "broadLocations": [
-    {
-      "id": 1,
-      "title": "In the Dragonspine Cliffs"
-    },
-    {
-      "id": 2,
-      "title": "In the Mournful Woodlands"
-    },
-    {
-      "id": 3,
-      "title": "In the Great Desert of Mak'tar"
-    },
-    {
-      "title": "In the far reaches of the Polar Shelf",
-      "id": 4
-    }
-  ],
-  "races": [
-    {
-      "id": 1,
-      "title": "Aarakocras"
-    },
-    {
-      "id": 2,
-      "title": "Aasimars"
-    },
-    {
-      "id": 3,
-      "title": "Autognomes"
-    },
-    {
-      "id": 4,
-      "title": "Bugbears"
-    },
-    {
-      "id": 5,
-      "title": "Centaurs"
-    },
-    {
-      "id": 6,
-      "title": "Changlings"
-    },
-    {
-      "id": 7,
-      "title": "Dragonborns"
-    },
-    {
-      "id": 8,
-      "title": "Dwarfs"
-    },
-    {
-      "id": 9,
-      "title": "Elfs"
-    },
-    {
-      "id": 10,
-      "title": "Fairys"
-    },
-    {
-      "id": 11,
-      "title": "Firbolgs"
-    },
-    {
-      "id": 12,
-      "title": "Genasii"
-    },
-    {
-      "id": 13,
-      "title": "Giths"
-    },
-    {
-      "id": 14,
-      "title": "Gnomes"
-    },
-    {
-      "id": 15,
-      "title": "Goblins"
-    },
-    {
-      "id": 16,
-      "title": "Goliaths"
-    },
-    {
-      "id": 17,
-      "title": "Half-Orcs"
-    },
-    {
-      "id": 18,
-      "title": "Half-Elfs"
-    },
-    {
-      "id": 19,
-      "title": "Halflings"
-    },
-    {
-      "id": 20,
-      "title": "Harengons"
-    },
-    {
-      "id": 21,
-      "title": "Humans"
-    },
-    {
-      "id": 22,
-      "title": "Kalashtars"
-    },
-    {
-      "id": 23,
-      "title": "Kenkus"
-    },
-    {
-      "id": 24,
-      "title": "Kobolds"
-    },
-    {
-      "id": 25,
-      "title": "Leonins"
-    },
-    {
-      "id": 26,
-      "title": "Lizardfolk"
-    },
-    {
-      "id": 27,
-      "title": "Loxodons"
-    },
-    {
-      "id": 28,
-      "title": "Minotaurs"
-    },
-    {
-      "id": 29,
-      "title": "Orcs"
-    },
-    {
-      "id": 30,
-      "title": "Owlins"
-    },
-    {
-      "id": 31,
-      "title": "Satyrs"
-    },
-    {
-      "id": 32,
-      "title": "Shifters"
-    },
-    {
-      "id": 33,
-      "title": "Tabaxii"
-    },
-    {
-      "id": 34,
-      "title": "Tiefling"
-    },
-    {
-      "id": 35,
-      "title": "Tortles"
-    },
-    {
-      "id": 36,
-      "title": "Tritons"
-    },
-    {
-      "id": 37,
-      "title": "Warforged"
-    },
-    {
-      "id": 38,
-      "title": "Yuan-ti"
-    }
-  ],
-  "raceDescription": [
-    {
-      "id": 1,
-      "title": "jovial"
-    },
-    {
-      "id": 2,
-      "title": "dismissive"
-    },
-    {
-      "title": "cowardly",
-      "id": 3
-    }
-  ],
-  "cultureActivity": [
-    {
-      "id": 1,
-      "title": "pray"
-    },
-    {
-      "id": 2,
-      "title": "hunt"
-    },
-    {
-      "title": "create pottery",
-      "id": 3
-    }
-  ],
-  "activityReason": [
-    {
-      "id": 1,
-      "title": "for sport"
-    },
-    {
-      "id": 2,
-      "title": "to quell the rage of their gods"
-    },
-    {
-      "title": "to payoff their debt",
-      "id": 3
-    }
-  ],
-  "specificLocationAdjective": [
-    {
-      "id": 1,
-      "title": "a dank"
-    },
-    {
-      "id": 2,
-      "title": "an opulent"
-    },
-    {
-      "title": "a beautiful",
-      "id": 3
-    }
-  ],
-  "specificLocation": [
-    {
-      "id": 1,
-      "title": "cellar"
-    },
-    {
-      "id": 2,
-      "title": "castle"
-    },
-    {
-      "title": "tavern",
-      "id": 3
-    }
-  ],
-  "specificCharacterState": [
-    {
-      "id": 1,
-      "title": "hungover"
-    },
-    {
-      "id": 2,
-      "title": "alone"
-    },
-    {
-      "title": "proud",
-      "id": 3
-    },
-    {
-      "title": "naked",
-      "id": 4
-    }
-  ],
-  "taskAction": [
-    {
-      "id": 1,
-      "title": "find"
-    },
-    {
-      "id": 2,
-      "title": "save"
-    },
-    {
-      "title": "protect",
-      "id": 3
-    },
-    {
-      "title": "guard",
-      "id": 4
-    }
-  ],
-  "taskObject": [
-    {
-      "id": 1,
-      "title": "a package"
-    },
-    {
-      "id": 2,
-      "title": "the King of Frogs"
-    },
-    {
-      "title": "an ornate crossbow",
-      "id": 3
-    }
-  ],
-  "specificGoalAction": [
-    {
-      "id": 1,
-      "title": "access"
-    },
-    {
-      "id": 2,
-      "title": "appease"
-    },
-    {
-      "title": "find",
-      "id": 3
-    }
-  ],
-  "specificGoalObject": [
-    {
-      "id": 1,
-      "title": "the Great Library of Alexandria"
-    },
-    {
-      "id": 2,
-      "title": "your father"
-    },
-    {
-      "title": "a great dragons hoard",
-      "id": 3
-    }
-  ],
-  "obstacleObject": [
-    {
-      "id": 1,
-      "title": "Thieve's guild"
-    },
-    {
-      "id": 2,
-      "title": "rightful heir"
-    },
-    {
-      "title": "council of ancient dragons",
-      "id": 3
-    }
-  ],
-  "obstacleObjectsMotivation": [
-    {
-      "id": 1,
-      "title": "ever being found"
-    },
-    {
-      "id": 20,
-      "title": "revealing their plan"
-    },
-    {
-      "title": "being touched by mortal hands",
-      "id": 21
-    }
-  ]
+    "locationName": [
+        {
+            "id": 1,
+            "title": "Mournful"
+        },
+        {
+            "id": 1,
+            "title": "Dragonspine"
+        },
+        {
+            "id": 1,
+            "title": "Great"
+        },
+        {
+            "id": 1,
+            "title": "Chittering"
+        },
+        {
+            "id": 1,
+            "title": "Thousand Eye"
+        },
+        {
+            "id": 1,
+            "title": "Wicked"
+        }
+    ],
+    "broadLocations": [
+        {
+            "id": 1,
+            "title": "Cliffs"
+        },
+        {
+            "id": 2,
+            "title": "Woodlands"
+        },
+        {
+            "id": 3,
+            "title": "Desert"
+        },
+        {
+            "title": "Polar Shelf",
+            "id": 4
+        },
+        {
+            "title": "Rainforest",
+            "id": 5
+        },
+        {
+            "title": "Archipelago",
+            "id": 6
+        }
+    ],
+    "races": [
+        {
+            "id": 1,
+            "title": "Aarakocras"
+        },
+        {
+            "id": 2,
+            "title": "Aasimars"
+        },
+        {
+            "id": 3,
+            "title": "Autognomes"
+        },
+        {
+            "id": 4,
+            "title": "Bugbears"
+        },
+        {
+            "id": 5,
+            "title": "Centaurs"
+        },
+        {
+            "id": 6,
+            "title": "Changlings"
+        },
+        {
+            "id": 7,
+            "title": "Dragonborns"
+        },
+        {
+            "id": 8,
+            "title": "Dwarfs"
+        },
+        {
+            "id": 9,
+            "title": "Elfs"
+        },
+        {
+            "id": 10,
+            "title": "Fairys"
+        },
+        {
+            "id": 11,
+            "title": "Firbolgs"
+        },
+        {
+            "id": 12,
+            "title": "Genasii"
+        },
+        {
+            "id": 13,
+            "title": "Giths"
+        },
+        {
+            "id": 14,
+            "title": "Gnomes"
+        },
+        {
+            "id": 15,
+            "title": "Goblins"
+        },
+        {
+            "id": 16,
+            "title": "Goliaths"
+        },
+        {
+            "id": 17,
+            "title": "Half-Orcs"
+        },
+        {
+            "id": 18,
+            "title": "Half-Elfs"
+        },
+        {
+            "id": 19,
+            "title": "Halflings"
+        },
+        {
+            "id": 20,
+            "title": "Harengons"
+        },
+        {
+            "id": 21,
+            "title": "Humans"
+        },
+        {
+            "id": 22,
+            "title": "Kalashtars"
+        },
+        {
+            "id": 23,
+            "title": "Kenkus"
+        },
+        {
+            "id": 24,
+            "title": "Kobolds"
+        },
+        {
+            "id": 25,
+            "title": "Leonins"
+        },
+        {
+            "id": 26,
+            "title": "Lizardfolk"
+        },
+        {
+            "id": 27,
+            "title": "Loxodons"
+        },
+        {
+            "id": 28,
+            "title": "Minotaurs"
+        },
+        {
+            "id": 29,
+            "title": "Orcs"
+        },
+        {
+            "id": 30,
+            "title": "Owlins"
+        },
+        {
+            "id": 31,
+            "title": "Satyrs"
+        },
+        {
+            "id": 32,
+            "title": "Shifters"
+        },
+        {
+            "id": 33,
+            "title": "Tabaxii"
+        },
+        {
+            "id": 34,
+            "title": "Tiefling"
+        },
+        {
+            "id": 35,
+            "title": "Tortles"
+        },
+        {
+            "id": 36,
+            "title": "Tritons"
+        },
+        {
+            "id": 37,
+            "title": "Warforged"
+        },
+        {
+            "id": 38,
+            "title": "Yuan-ti"
+        }
+    ],
+    "raceDescription": [
+        {
+            "id": 1,
+            "title": "jovial"
+        },
+        {
+            "id": 2,
+            "title": "dismissive"
+        },
+        {
+            "title": "cowardly",
+            "id": 3
+        },
+        {
+            "title": "angry",
+            "id": 4
+        }
+    ],
+    "cultureActivity": [
+        {
+            "id": 1,
+            "title": "pray"
+        },
+        {
+            "id": 2,
+            "title": "hunt"
+        },
+        {
+            "title": "create pottery",
+            "id": 3
+        }
+    ],
+    "activityReason": [
+        {
+            "id": 1,
+            "title": "for sport"
+        },
+        {
+            "id": 2,
+            "title": "to quell the rage of their gods"
+        },
+        {
+            "title": "to payoff their debt",
+            "id": 3
+        }
+    ],
+    "specificLocationAdjective": [
+        {
+            "id": 1,
+            "title": "a dank"
+        },
+        {
+            "id": 2,
+            "title": "an opulent"
+        },
+        {
+            "title": "a beautiful",
+            "id": 3
+        }
+    ],
+    "specificLocation": [
+        {
+            "id": 1,
+            "title": "cellar"
+        },
+        {
+            "id": 2,
+            "title": "castle"
+        },
+        {
+            "title": "tavern",
+            "id": 3
+        }
+    ],
+    "specificCharacterState": [
+        {
+            "id": 1,
+            "title": "hungover"
+        },
+        {
+            "id": 2,
+            "title": "alone"
+        },
+        {
+            "title": "proud",
+            "id": 3
+        },
+        {
+            "title": "naked",
+            "id": 4
+        }
+    ],
+    "taskAction": [
+        {
+            "id": 1,
+            "title": "find"
+        },
+        {
+            "id": 2,
+            "title": "save"
+        },
+        {
+            "title": "protect",
+            "id": 3
+        },
+        {
+            "title": "guard",
+            "id": 4
+        }
+    ],
+    "taskObject": [
+        {
+            "id": 1,
+            "title": "a package"
+        },
+        {
+            "id": 2,
+            "title": "the King of Frogs"
+        },
+        {
+            "title": "an ornate crossbow",
+            "id": 3
+        }
+    ],
+    "specificGoalAction": [
+        {
+            "id": 1,
+            "title": "access"
+        },
+        {
+            "id": 2,
+            "title": "appease"
+            },
+        {
+            "title": "find",
+            "id": 3
+        }
+    ],
+    "specificGoalObject": [
+        {
+            "id": 1,
+            "title": "the Great Library of Alexandria"
+        },
+        {
+            "id": 2,
+            "title": "your father"
+        },
+        {
+            "title": "a great dragons hoard",
+            "id": 3
+        }
+    ],
+    "obstacleObject": [
+        {
+            "id": 1,
+            "title": "Thieve's guild"
+        },
+        {
+            "id": 2,
+            "title": "rightful heir"
+        },
+        {
+            "title": "council of ancient dragons",
+            "id": 3
+        }
+    ],
+    "obstacleObjectsMotivation": [
+        {
+            "id": 1,
+            "title": "ever being found"
+        },
+        {
+            "id": 20,
+            "title": "revealing their plan"
+        },
+        {
+            "title": "being touched by mortal hands",
+            "id": 21
+        }
+    ]
 }

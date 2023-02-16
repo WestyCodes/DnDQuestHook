@@ -3,6 +3,7 @@ import { getPrompts } from '../apiFunctions/apiFunctions'
 import './main.css'
 
 export default function Main() {
+    const [locationName, setLocationName] = useState([])
     const [broadLocations, setBroadLocations] = useState([])
     const [races, setRaces] = useState([])
     const [raceDescription, setRaceDescription] = useState([])
@@ -24,6 +25,8 @@ export default function Main() {
 
     
     async function promptsAPIReuqest() {
+        const locName = await getPrompts("locationName")
+        setLocationName(locName)
         const broadLocs = await getPrompts("broadLocations")
         setBroadLocations(broadLocs)
         const race = await getPrompts("races")
@@ -68,6 +71,7 @@ export default function Main() {
     const randomiseQuest = () => {
         setLoadQuest(false)
         const quest = {}
+        quest.mainName = locationName[Math.floor(Math.random()*locationName.length)].title
         quest.mainLocation = broadLocations[Math.floor(Math.random()*broadLocations.length)].title
         quest.inhabitantsDescription = raceDescription[Math.floor(Math.random()*raceDescription.length)].title
         quest.inhabitants = races[Math.floor(Math.random()*races.length)].title
@@ -86,6 +90,13 @@ export default function Main() {
         quest.goalObject = specificGoalObject[Math.floor(Math.random()*specificGoalObject.length)].title
         quest.antagonistObject = obstacleObject[Math.floor(Math.random()*obstacleObject.length)].title
         quest.antagonistMotivation = obstacleObjectsMotivation[Math.floor(Math.random()*obstacleObjectsMotivation.length)].title
+
+        if(quest.mainLocation === "Cliffs" || quest.mainLocation === "Shores" || quest.mainLocation === "Sea" || quest.mainLocation === "Ocean" || quest.mainLocation === "Plains") {
+            quest.startingPhrase = "On the"
+        } else {
+            quest.startingPhrase = "In the"
+        }
+
         setQuestText(quest)
         setLoadQuest(true)
     }
@@ -101,7 +112,7 @@ export default function Main() {
             {loadQuest && (
                 <div className='questTextWrap'>
                     <p>
-                        {questText.mainLocation}, where {questText.inhabitantsDescription} {questText.inhabitants} {questText.culture} {questText.cultureReason}, 
+                        {questText.startingPhrase} {questText.mainName} {questText.mainLocation}, where {questText.inhabitantsDescription} {questText.inhabitants} {questText.culture} {questText.cultureReason}, 
                         you find yourself in {questText.pcLocationAdj} {questText.pcLocation}, {questText.pcMood1} and {questText.pcMood2}. 
                         You must {questText.questAction} {questText.questObject} in order to {questText.goalAction} {questText.goalObject}.
                         However, the {questText.antagonistObject} would be opposed to the {questText.questObject} {questText.antagonistMotivation}!

@@ -3,7 +3,7 @@ import { post } from '../apiFunctions/apiFunctions.js'
 
 export default function PromptsPage() {
     
-    
+    const [locationNameForm, setLocationNameForm] = useState("")
     const [broadLocationsForm, setBroadLocationsForm] = useState("")
     const [raceDescriptionForm, setRaceDescriptionForm] = useState("")
     const [cultureActivityForm, setCultureActivityForm] = useState("")
@@ -19,6 +19,18 @@ export default function PromptsPage() {
     const [obstacleObjectsMotivationForm, setObstacleObjectsMotivationForm] = useState("")
       
     
+    const handleChangeLN = (event) => {
+        const value = event.target.value;
+        setLocationNameForm(value)
+    }
+
+    const handleSubmitLN = (event) => {
+        event.preventDefault()
+        const data = {title: locationNameForm}
+        post("locationName", data)
+        event.target.reset()
+    }
+
     const handleChangeBL = (event) => {
         const value = event.target.value;
         setBroadLocationsForm(value)
@@ -178,144 +190,155 @@ export default function PromptsPage() {
     return (
         <div>
             <h2>Add some prompts</h2>
-            <form className="form-stack contact-form" onSubmit={handleSubmitBL}>
-                <label htmlFor="broadLocations">A Broad Location: </label>
-                <input id="broadLocations" name="broadLocations" type="text" required  onChange={handleChangeBL}/>
-                <div className="actions-section">
-                    <button className="button blue" type="submit">
+
+            <form className="" onSubmit={handleSubmitLN}>
+                <label htmlFor="locationName">A Fantastical Name: </label>
+                <input id="locationName" name="locationName" type="text" required  onChange={handleChangeLN}/>
+                <div className="">
+                    <button className="submitPromptButton" type="submit">
                     Submit
                     </button>
                 </div>
             </form>
 
-            <form className="form-stack contact-form" onSubmit={handleSubmitRD}>
+            <form className="" onSubmit={handleSubmitBL}>
+                <label htmlFor="broadLocations">A Broad Location: </label>
+                <input id="broadLocations" name="broadLocations" type="text" required  onChange={handleChangeBL}/>
+                <div className="">
+                    <button className="submitPromptButton" type="submit">
+                    Submit
+                    </button>
+                </div>
+            </form>
+
+            <form className="" onSubmit={handleSubmitRD}>
 
                 <label htmlFor="raceDescription">General Emotion: </label>
                 <input id="raceDescription" name="raceDescription" type="text" required onChange={handleChangeRD}/>
-                <div className="actions-section">
-                    <button className="button blue" type="submit">
+                <div className="">
+                    <button className="submitPromptButton" type="submit">
                     Submit
                     </button>
                 </div>
             </form>
 
-            <form className="form-stack contact-form" onSubmit={handleSubmitCA}>
+            <form className="" onSubmit={handleSubmitCA}>
 
                 <label htmlFor="cultureActivity">Culture Activity: </label>
                 <input id="cultureActivity" name="cultureActivity" type="text" required onChange={handleChangeCA}/>
-                <div className="actions-section">
-                    <button className="button blue" type="submit">
+                <div className="">
+                    <button className="submitPromptButton" type="submit">
                     Submit
                     </button>
                 </div>
             </form>
 
-            <form className="form-stack contact-form" onSubmit={handleSubmitAR}>
+            <form className="" onSubmit={handleSubmitAR}>
 
                 <label htmlFor="activityReason">Activity Reason: </label>
                 <input id="activityReason" name="activityReason" type="text" required onChange={handleChangeAR}/>
-                <div className="actions-section">
-                    <button className="button blue" type="submit">
+                <div className="">
+                    <button className="submitPromptButton" type="submit">
                     Submit
                     </button>
                 </div>
             </form>
 
 
-            <form className="form-stack contact-form" onSubmit={handleSubmitSLA}>
+            <form className="" onSubmit={handleSubmitSLA}>
 
                 <label htmlFor="specificLocationAdjective">Descriptive Word for Location: </label>
                 <input id="specificLocationAdjective" name="specificLocationAdjective" type="text" required onChange={handleChangeSLA}/>
-                <div className="actions-section">
-                    <button className="button blue" type="submit">
+                <div className="">
+                    <button className="submitPromptButton" type="submit">
                     Submit
                     </button>
                 </div>
             </form>
 
-            <form className="form-stack contact-form" onSubmit={handleSubmitSL}>
+            <form className="" onSubmit={handleSubmitSL}>
 
             <label htmlFor="specificLocation">A more specific Location: </label>
             <input id="specificLocation" name="specificLocation" type="text" required onChange={handleChangeSL}/>
-                <div className="actions-section">
-                    <button className="button blue" type="submit">
+                <div className="">
+                    <button className="submitPromptButton" type="submit">
                     Submit
                     </button>
                 </div>
             </form>
 
-            <form className="form-stack contact-form" onSubmit={handleSubmitSCS}>
+            <form className="" onSubmit={handleSubmitSCS}>
 
                 <label htmlFor="specificCharacterState">Characters emotional/physical state: </label>
                 <input id="specificCharacterState" name="specificCharacterState" type="text" required onChange={handleChangeSCS}/>
-                <div className="actions-section">
-                    <button className="button blue" type="submit">
+                <div className="">
+                    <button className="submitPromptButton" type="submit">
                     Submit
                     </button>
                 </div>
             </form>
 
-            <form className="form-stack contact-form" onSubmit={handleSubmitTA}>
+            <form className="" onSubmit={handleSubmitTA}>
 
                 <label htmlFor="taskAction">What is your Quests Action?: </label>
                 <input id="taskAction" name="taskAction" type="text" required onChange={handleChangeTA}/>
-                <div className="actions-section">
-                    <button className="button blue" type="submit">
+                <div className="">
+                    <button className="submitPromptButton" type="submit">
                     Submit
                     </button>
                 </div>
             </form>
 
-            <form className="form-stack contact-form" onSubmit={handleSubmitTO}>
+            <form className="" onSubmit={handleSubmitTO}>
 
                 <label htmlFor="taskObject">What is the Object of your Quest?: </label>
                 <input id="taskObject" name="taskObject" type="text" required onChange={handleChangeTO}/>
-                <div className="actions-section">
-                    <button className="button blue" type="submit">
+                <div className="">
+                    <button className="submitPromptButton" type="submit">
                     Submit
                     </button>
                 </div>
             </form>
 
-            <form className="form-stack contact-form" onSubmit={handleSubmitSGA}>
+            <form className="" onSubmit={handleSubmitSGA}>
 
                 <label htmlFor="specificGoalAction">Verb for your overall Goal: </label>
                 <input id="specificGoalAction" name="specificGoalAction" type="text" required onChange={handleChangeSGA}/>
-                <div className="actions-section">
-                    <button className="button blue" type="submit">
+                <div className="">
+                    <button className="submitPromptButton" type="submit">
                     Submit
                     </button>
                 </div>
             </form>
 
-            <form className="form-stack contact-form" onSubmit={handleSubmitSGO}>
+            <form className="" onSubmit={handleSubmitSGO}>
 
                 <label htmlFor="specificGoalObject">Object of your overall Goal: </label>
                 <input id="specificGoalObject" name="specificGoalObject" type="text" required onChange={handleChangeSGO}/>
-                <div className="actions-section">
-                    <button className="button blue" type="submit">
+                <div className="">
+                    <button className="submitPromptButton" type="submit">
                     Submit
                     </button>
                 </div>
             </form>
 
-            <form className="form-stack contact-form" onSubmit={handleSubmitOO}>
+            <form className="" onSubmit={handleSubmitOO}>
 
                 <label htmlFor="obstacleObject">Who is against your goal?: </label>
                 <input id="obstacleObject" name="obstacleObject" type="text" required onChange={handleChangeOO}/>
-                <div className="actions-section">
-                    <button className="button blue" type="submit">
+                <div className="">
+                    <button className="submitPromptButton" type="submit">
                     Submit
                     </button>
                 </div>
             </form>
 
-            <form className="form-stack contact-form" onSubmit={handleSubmitOOM}>
+            <form className="" onSubmit={handleSubmitOOM}>
 
                 <label htmlFor="obstacleObjectMotivation">What is this villains motivation?: </label>
                 <input id="obstacleObjectMotivation" name="obstacleObjectMotivation" type="text" required onChange={handleChangeOOM}/>
-                <div className="actions-section">
-                    <button className="button blue" type="submit">
+                <div className="">
+                    <button className="submitPromptButton" type="submit">
                     Submit
                     </button>
                 </div>
