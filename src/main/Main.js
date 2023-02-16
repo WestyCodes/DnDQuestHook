@@ -104,7 +104,6 @@ export default function Main() {
                 </div>
             )}
             {loadingAPI ? (<p className='loading'>Loading...</p>) : (<p onClick={(randomiseQuest)}>{loadQuest ? `That sucks... do it again!`: `Generate Me A Quest!`}</p>)}
-            {/* <p onClick={(randomiseQuest)}>That sucks, try again!</p> */}
         </div>
     )
 }
