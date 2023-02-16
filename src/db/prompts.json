@@ -11,6 +11,10 @@
     {
       "id": 3,
       "title": "In the Great Desert of Mak'tar"
+    },
+    {
+      "title": "In the far reaches of the Polar Shelf",
+      "id": 4
     }
   ],
   "races": [
@@ -175,6 +179,10 @@
     {
       "id": 2,
       "title": "dismissive"
+    },
+    {
+      "title": "cowardly",
+      "id": 3
     }
   ],
   "cultureActivity": [
@@ -185,6 +193,10 @@
     {
       "id": 2,
       "title": "hunt"
+    },
+    {
+      "title": "create pottery",
+      "id": 3
     }
   ],
   "activityReason": [
@@ -195,6 +207,10 @@
     {
       "id": 2,
       "title": "to quell the rage of their gods"
+    },
+    {
+      "title": "to payoff their debt",
+      "id": 3
     }
   ],
   "specificLocationAdjective": [
@@ -205,6 +221,10 @@
     {
       "id": 2,
       "title": "an opulent"
+    },
+    {
+      "title": "a beautiful",
+      "id": 3
     }
   ],
   "specificLocation": [
@@ -215,6 +235,10 @@
     {
       "id": 2,
       "title": "castle"
+    },
+    {
+      "title": "tavern",
+      "id": 3
     }
   ],
   "specificCharacterState": [
@@ -225,6 +249,14 @@
     {
       "id": 2,
       "title": "alone"
+    },
+    {
+      "title": "proud",
+      "id": 3
+    },
+    {
+      "title": "naked",
+      "id": 4
     }
   ],
   "taskAction": [
@@ -235,16 +267,28 @@
     {
       "id": 2,
       "title": "save"
+    },
+    {
+      "title": "protect",
+      "id": 3
+    },
+    {
+      "title": "guard",
+      "id": 4
     }
   ],
   "taskObject": [
     {
       "id": 1,
-      "title": "package"
+      "title": "a package"
     },
     {
       "id": 2,
-      "title": "King of Frogs"
+      "title": "the King of Frogs"
+    },
+    {
+      "title": "an ornate crossbow",
+      "id": 3
     }
   ],
   "specificGoalAction": [
@@ -255,6 +299,10 @@
     {
       "id": 2,
       "title": "appease"
+    },
+    {
+      "title": "find",
+      "id": 3
     }
   ],
   "specificGoalObject": [
@@ -265,6 +313,10 @@
     {
       "id": 2,
       "title": "your father"
+    },
+    {
+      "title": "a great dragons hoard",
+      "id": 3
     }
   ],
   "obstacleObject": [
@@ -275,6 +327,10 @@
     {
       "id": 2,
       "title": "rightful heir"
+    },
+    {
+      "title": "council of ancient dragons",
+      "id": 3
     }
   ],
   "obstacleObjectsMotivation": [
@@ -285,6 +341,10 @@
     {
       "id": 20,
       "title": "revealing their plan"
+    },
+    {
+      "title": "being touched by mortal hands",
+      "id": 21
     }
   ]
 }

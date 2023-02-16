@@ -77,6 +77,9 @@ export default function Main() {
         quest.pcLocation = specificLocation[Math.floor(Math.random()*specificLocation.length)].title
         quest.pcMood1 = specificCharacterState[Math.floor(Math.random()*specificCharacterState.length)].title
         quest.pcMood2 = specificCharacterState[Math.floor(Math.random()*specificCharacterState.length)].title
+        while(quest.pcMood1 === quest.pcMood2){
+            quest.pcMood2 = specificCharacterState[Math.floor(Math.random()*specificCharacterState.length)].title
+        }
         quest.questAction = taskAction[Math.floor(Math.random()*taskAction.length)].title
         quest.questObject = taskObject[Math.floor(Math.random()*taskObject.length)].title
         quest.goalAction = specificGoalAction[Math.floor(Math.random()*specificGoalAction.length)].title
@@ -85,7 +88,6 @@ export default function Main() {
         quest.antagonistMotivation = obstacleObjectsMotivation[Math.floor(Math.random()*obstacleObjectsMotivation.length)].title
         setQuestText(quest)
         setLoadQuest(true)
-        // console.log(questText)
     }
 
 
@@ -101,7 +103,7 @@ export default function Main() {
                     <p>
                         {questText.mainLocation}, where {questText.inhabitantsDescription} {questText.inhabitants} {questText.culture} {questText.cultureReason}, 
                         you find yourself in {questText.pcLocationAdj} {questText.pcLocation}, {questText.pcMood1} and {questText.pcMood2}. 
-                        You must {questText.questAction} the {questText.questObject} in order to {questText.goalAction} {questText.goalObject}.
+                        You must {questText.questAction} {questText.questObject} in order to {questText.goalAction} {questText.goalObject}.
                         However, the {questText.antagonistObject} would be opposed to the {questText.questObject} {questText.antagonistMotivation}!
                     </p>
                 </div>
