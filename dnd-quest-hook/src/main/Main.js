@@ -17,6 +17,7 @@ export default function Main() {
     const [obstacleObject, setObstacleObject] = useState([])
     const [obstacleObjectsMotivation, setObstacleObjectsMotivation] = useState([])
 
+    const [questText, setQuestText] = useState()
     const [loading, setIsLoading] = useState(true)
 
     
@@ -62,6 +63,26 @@ export default function Main() {
         getMyPrompts()
     }, [])
 
+    const randomiseQuest = () => {
+        const quest = {}
+        quest.mainLocation = broadLocations[Math.floor(Math.random()*broadLocations.length)].title
+        quest.inhabitantsDescription = raceDescription[Math.floor(Math.random()*raceDescription.length)].title
+        quest.inhabitants = races[Math.floor(Math.random()*races.length)].title
+        quest.culture = cultureActivity[Math.floor(Math.random()*cultureActivity.length)].title
+        quest.cultureReason = activityReason[Math.floor(Math.random()*activityReason.length)].title
+        quest.pcLocationAdj = specificLocationAdjective[Math.floor(Math.random()*specificLocationAdjective.length)].title
+        quest.pcLocation = specificLocation[Math.floor(Math.random()*specificLocation.length)].title
+        quest.pcMood = specificCharacterState[Math.floor(Math.random()*specificCharacterState.length)].title
+        quest.questAction = taskAction[Math.floor(Math.random()*taskAction.length)].title
+        quest.questObject = taskObject[Math.floor(Math.random()*taskObject.length)].title
+        quest.goalAction = specificGoalAction[Math.floor(Math.random()*specificGoalAction.length)].title
+        quest.goalObject = specificGoalObject[Math.floor(Math.random()*specificGoalObject.length)].title
+        quest.antagonistObject = obstacleObject[Math.floor(Math.random()*obstacleObject.length)].title
+        quest.antagonistMotivation = obstacleObjectsMotivation[Math.floor(Math.random()*obstacleObjectsMotivation.length)].title
+        setQuestText(quest)
+        // console.log(questText)
+    }
+
 
     return (
 
@@ -74,6 +95,7 @@ export default function Main() {
                 You must {taskAction[0]?.title} the {taskObject[0]?.title} in order to {specificGoalAction[0]?.title} {specificGoalObject[0]?.title}.
                 However, the {obstacleObject[0]?.title} would be opposed to the {taskObject[0]?.title} {obstacleObjectsMotivation[0]?.title}!
             </p>)}
+            <p onClick={(randomiseQuest)}>That sucks, try again!</p>
         </div>
     )
 }
