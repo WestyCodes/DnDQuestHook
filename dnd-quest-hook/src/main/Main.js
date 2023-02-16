@@ -1,5 +1,6 @@
 import { useState, useEffect } from 'react'
 import { getPrompts } from '../apiFunctions/apiFunctions'
+import './main.css'
 
 export default function Main() {
     const [broadLocations, setBroadLocations] = useState([])
@@ -90,11 +91,10 @@ export default function Main() {
 
     return (
 
-        <div>
-            <p>This is the Main</p>
-            <p>This is a test randomised Quest:</p>
+        <div className='mainWrapper'>
+            <h2>Dungeons and Dragons Random Quest Generator!</h2>
             {loadQuest && (
-                <div>
+                <div className='questTextWrap'>
                     <p>
                         {questText.mainLocation}, where {questText.inhabitantsDescription} {questText.inhabitants} {questText.culture} {questText.cultureReason}, 
                         you find yourself in a {questText.pcLocationAdj} {questText.pcLocation}, {questText.pcMood1} and {questText.pcMood2}. 
@@ -103,7 +103,7 @@ export default function Main() {
                     </p>
                 </div>
             )}
-            {loadingAPI ? (<p>Loading...</p>) : (<p onClick={(randomiseQuest)}>{loadQuest ? `That sucks... do it again!`: `Generate Me A Quest!`}</p>)}
+            {loadingAPI ? (<p className='loading'>Loading...</p>) : (<p onClick={(randomiseQuest)}>{loadQuest ? `That sucks... do it again!`: `Generate Me A Quest!`}</p>)}
             {/* <p onClick={(randomiseQuest)}>That sucks, try again!</p> */}
         </div>
     )

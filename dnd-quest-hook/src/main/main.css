@@ -1,0 +1,10 @@
+.mainWrapper {
+    display: grid;
+    grid-template-rows: 1fr 1fr 1fr;
+    gap: 5px;
+    place-items: center;
+}
+
+.questTextWrap {
+    max-width: 500px;
+}
