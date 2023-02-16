@@ -318,14 +318,14 @@
     "taskObject": [
         {
             "id": 1,
-            "title": "a package"
+            "title": "Mysterious Crate"
         },
         {
             "id": 2,
-            "title": "the King of Frogs"
+            "title": "King of Frogs"
         },
         {
-            "title": "an ornate crossbow",
+            "title": "Gemmed Ornate Crossbow",
             "id": 3
         }
     ],

@@ -114,8 +114,8 @@ export default function Main() {
                     <p>
                         {questText.startingPhrase} {questText.mainName} {questText.mainLocation}, where {questText.inhabitantsDescription} {questText.inhabitants} {questText.culture} {questText.cultureReason}, 
                         you find yourself in {questText.pcLocationAdj} {questText.pcLocation}, {questText.pcMood1} and {questText.pcMood2}. 
-                        You must {questText.questAction} {questText.questObject} in order to {questText.goalAction} {questText.goalObject}.
-                        However, the {questText.antagonistObject} would be opposed to the {questText.questObject} {questText.antagonistMotivation}!
+                        You must {questText.questAction} the {questText.questObject} in order to {questText.goalAction} {questText.goalObject}.
+                        However, the {questText.antagonistObject} would object to the {questText.questObject} {questText.antagonistMotivation}!
                     </p>
                 </div>
             )}
