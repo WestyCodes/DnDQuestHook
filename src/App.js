@@ -7,16 +7,16 @@ import Footer from './footer/Footer.js';
 import './App.css';
 
 function App() {
-
+    const [numberOfQuests, setNumberOfQuests] = useState()
     return (
         <div className="App">
             <Header />
             <Routes>
-                <Route path='/' element={<Main />}/>
+                <Route path='/' element={<Main setNumberOfQuests={setNumberOfQuests}/>}/>
                 <Route path='/prompts' element={<PromptsPage />}/>
             </Routes>
             
-            <Footer />
+            <Footer numberOfQuests={numberOfQuests}/>
         </div>
     );
 }

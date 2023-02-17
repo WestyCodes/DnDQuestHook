@@ -2,7 +2,7 @@ import { useState, useEffect } from 'react'
 import { getPrompts } from '../apiFunctions/apiFunctions'
 import './main.css'
 
-export default function Main() {
+export default function Main( {setNumberOfQuests} ) {
     const [locationName, setLocationName] = useState([])
     const [broadLocations, setBroadLocations] = useState([])
     const [races, setRaces] = useState([])
@@ -101,6 +101,11 @@ export default function Main() {
         setLoadQuest(true)
     }
 
+    const howManyQuests = () => {
+        const res = locationName.length * broadLocations.length * raceDescription.length * races.length * cultureActivity.length * activityReason.length * specificLocationAdjective.length * specificLocation.length * specificCharacterState.length * (specificCharacterState.length - 1) * taskAction.length * taskObject.length * specificGoalAction.length * specificGoalObject.length * obstacleObject.length * obstacleObjectsMotivation.length
+        setNumberOfQuests(res)
+    }
+    howManyQuests()
 
     return (
         <div className='mainDiv'>
