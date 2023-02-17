@@ -37,6 +37,10 @@
     margin: 0 0 10px 0;
 }
 
+.mainButton:hover {
+    background-color: #4141415a;
+}
+
 .mainButton:active {
     background-color: black;
     font-size: 80%;
