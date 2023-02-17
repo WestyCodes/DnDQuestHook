@@ -1,5 +1,6 @@
 import { useState } from "react"
 import { post } from '../apiFunctions/apiFunctions.js'
+import './promptspage.css'
 
 export default function PromptsPage() {
     
@@ -188,172 +189,222 @@ export default function PromptsPage() {
     }
 
     return (
-        <div>
-            <h2>Add some prompts</h2>
+        <div className="promptsMain">
 
-            <div className="formDiv">
-                <form className="" onSubmit={handleSubmitLN}>
-                    <label htmlFor="locationName">A Fantastical Name: </label>
-                    <input id="locationName" name="locationName" type="text" required  onChange={handleChangeLN}/>
-                    <div className="">
-                        <button className="submitPromptButton" type="submit">
-                        Submit
-                        </button>
-                    </div>
-                </form>
-            </div>
+            <div className="promptsWrap">
+                <h2>Add Some Prompts</h2>
 
-            <div className="formDiv">
-                <form className="" onSubmit={handleSubmitBL}>
-                    <label htmlFor="broadLocations">A Broad Location: </label>
-                    <input id="broadLocations" name="broadLocations" type="text" required  onChange={handleChangeBL}/>
-                    <div className="">
-                        <button className="submitPromptButton" type="submit">
-                        Submit
-                        </button>
-                    </div>
-                </form>
-            </div>
+                <div className="formDiv">
+                    <form className="formWrap" onSubmit={handleSubmitLN}>
+                        <div className="inputWrap">
+                            <label htmlFor="locationName">A Fantastical Name: </label>
+                            <input id="locationName" name="locationName" type="text" required  onChange={handleChangeLN}/>
+                            <p className="examples">E.g. Doomspire, Fresh Haven</p>
+                        </div>
+                        <div className="buttonWrap">
+                            <button className="submitPromptButton" type="submit">
+                            Submit
+                            </button>
+                        </div>
+                    </form>
+                </div>
 
-            <div className="formDiv">
-                <form className="" onSubmit={handleSubmitRD}>
+                <div className="formDiv">
+                    <form className="formWrap" onSubmit={handleSubmitBL}>
+                        <div className="inputWrap">
+                            <label htmlFor="broadLocations">A Broad Location: </label>
+                            <input id="broadLocations" name="broadLocations" type="text" required  onChange={handleChangeBL}/>
+                            <p className="examples">E.g. Cliffs, Deserts</p>
+                        </div>
+                        <div className="buttonWrap">
+                            <button className="submitPromptButton" type="submit">
+                            Submit
+                            </button>
+                        </div>
+                    </form>
+                </div>
 
-                    <label htmlFor="raceDescription">General Emotion: </label>
-                    <input id="raceDescription" name="raceDescription" type="text" required onChange={handleChangeRD}/>
-                    <div className="">
-                        <button className="submitPromptButton" type="submit">
-                        Submit
-                        </button>
-                    </div>
-                </form>
-            </div>
+                <div className="formDiv">
+                    <form className="formWrap" onSubmit={handleSubmitRD}>
+                        <div className="inputWrap">
+                            <label htmlFor="raceDescription">General Emotion: </label>
+                            <input id="raceDescription" name="raceDescription" type="text" required onChange={handleChangeRD}/>
+                            <p className="examples">E.g. dismissive, angry</p>
+                        </div>
+                        <div className="buttonWrap">
+                            <button className="submitPromptButton" type="submit">
+                            Submit
+                            </button>
+                        </div>
+                    </form>
+                </div>
 
-            <div className="formDiv">
-                <form className="" onSubmit={handleSubmitCA}>
-                    <label htmlFor="cultureActivity">Culture Activity: </label>
-                    <input id="cultureActivity" name="cultureActivity" type="text" required onChange={handleChangeCA}/>
-                    <div className="">
-                        <button className="submitPromptButton" type="submit">
-                        Submit
-                        </button>
-                    </div>
-                </form>
+                <div className="formDiv">
+                    <form className="formWrap" onSubmit={handleSubmitCA}>
+                        <div className="inputWrap">
+                            <label htmlFor="cultureActivity">Culture Activity: </label>
+                            <input id="cultureActivity" name="cultureActivity" type="text" required onChange={handleChangeCA}/>
+                            <p className="examples">E.g. pray, hunt</p>
+                        </div>
+                        <div className="buttonWrap">
+                            <button className="submitPromptButton" type="submit">
+                            Submit
+                            </button>
+                        </div>
+                    </form>
+                    
+                </div>
+
+                <div className="formDiv">
+                    <form className="formWrap" onSubmit={handleSubmitAR}>
+                        <div className="inputWrap">
+                            <label htmlFor="activityReason">Activity Reason: </label>
+                            <input id="activityReason" name="activityReason" type="text" required onChange={handleChangeAR}/>
+                            <p className="examples">E.g. for sport, to quell the rage of their gods</p>
+                        </div>
+                        <div className="buttonWrap">
+                            <button className="submitPromptButton" type="submit">
+                            Submit
+                            </button>
+                        </div>
+                    </form>
+                </div>
+
+                <div className="formDiv">
+                    <form className="formWrap" onSubmit={handleSubmitSLA}>
+                        <div className="inputWrap">
+                            <label htmlFor="specificLocationAdjective">Descriptive Word for Location: </label>
+                            <input id="specificLocationAdjective" name="specificLocationAdjective" type="text" required onChange={handleChangeSLA}/>
+                            <p className="examples">E.g. a dank, an opulent</p>
+                        </div>
+                        <div className="buttonWrap">
+                            <button className="submitPromptButton" type="submit">
+                            Submit
+                            </button>
+                        </div>
+                    </form>
+                </div>
+
+                <div className="formDiv">
+                    <form className="formWrap" onSubmit={handleSubmitSL}>
+                        <div className="inputWrap">
+                            <label htmlFor="specificLocation">A more specific Location: </label>
+                            <input id="specificLocation" name="specificLocation" type="text" required onChange={handleChangeSL}/>
+                            <p className="examples">E.g. cellar, tavern</p>
+                        </div>
+                        <div className="buttonWrap">
+                            <button className="submitPromptButton" type="submit">
+                            Submit
+                            </button>
+                        </div>
+                    </form>
+                </div>
+
+                <div className="formDiv">
+                    <form className="formWrap" onSubmit={handleSubmitSCS}>
+                        <div className="inputWrap">
+                            <label htmlFor="specificCharacterState">Characters emotional/physical state: </label>
+                            <input id="specificCharacterState" name="specificCharacterState" type="text" required onChange={handleChangeSCS}/>
+                            <p className="examples">E.g. hungover, weak</p>
+                        </div>
+                        <div className="buttonWrap">
+                            <button className="submitPromptButton" type="submit">
+                            Submit
+                            </button>
+                        </div>
+                    </form>
+                </div>
+
+                <div className="formDiv">
+                    <form className="formWrap" onSubmit={handleSubmitTA}>
+                        <div className="inputWrap">
+                            <label htmlFor="taskAction">What is your Quests Action?: </label>
+                            <input id="taskAction" name="taskAction" type="text" required onChange={handleChangeTA}/>
+                            <p className="examples">E.g. find, save</p>
+                        </div>
+                        <div className="buttonWrap">
+                            <button className="submitPromptButton" type="submit">
+                            Submit
+                            </button>
+                        </div>
+                    </form> 
+                </div>
+
+                <div className="formDiv">
+                    <form className="formWrap" onSubmit={handleSubmitTO}>
+                        <div className="inputWrap">
+                            <label htmlFor="taskObject">What is the Object of your Quest?: </label>
+                            <input id="taskObject" name="taskObject" type="text" required onChange={handleChangeTO}/>
+                            <p className="examples">E.g. Mysterious Create, King of Frogs</p>
+                        </div>
+                        <div className="buttonWrap">
+                            <button className="submitPromptButton" type="submit">
+                            Submit
+                            </button>
+                        </div>
+                    </form>
+                </div>
+
+                <div className="formDiv">
+                    <form className="formWrap" onSubmit={handleSubmitSGA}>
+                        <div className="inputWrap">
+                            <label htmlFor="specificGoalAction">Verb for your overall Goal: </label>
+                            <input id="specificGoalAction" name="specificGoalAction" type="text" required onChange={handleChangeSGA}/>
+                            <p className="examples">E.g. access, appease</p>
+                        </div>
+                        <div className="buttonWrap">
+                            <button className="submitPromptButton" type="submit">
+                            Submit
+                            </button>
+                        </div>
+                    </form>
+                </div>
+
+                <div className="formDiv">
+                    <form className="formWrap" onSubmit={handleSubmitSGO}>
+                        <div className="inputWrap">
+                            <label htmlFor="specificGoalObject">Object of your overall Goal: </label>
+                            <input id="specificGoalObject" name="specificGoalObject" type="text" required onChange={handleChangeSGO}/>
+                            <p className="examples">E.g. the Great Library of Alexandria, your father</p>
+                        </div>
+                        <div className="buttonWrap">
+                            <button className="submitPromptButton" type="submit">
+                            Submit
+                            </button>
+                        </div>
+                    </form>
+                </div>
                 
+                <div className="formDiv">
+                    <form className="formWrap" onSubmit={handleSubmitOO}>
+                        <div className="inputWrap">
+                            <label htmlFor="obstacleObject">Who is against your goal?: </label>
+                            <input id="obstacleObject" name="obstacleObject" type="text" required onChange={handleChangeOO}/>
+                            <p className="examples">E.g. Thieve's Guild, rightful heir</p>
+                        </div>
+                        <div className="buttonWrap">
+                            <button className="submitPromptButton" type="submit">
+                            Submit
+                            </button>
+                        </div>
+                    </form>
+                </div>
+                
+                <div className="formDiv">
+                    <form className="formWrap" onSubmit={handleSubmitOOM}>
+                        <div className="inputWrap">
+                            <label htmlFor="obstacleObjectMotivation">What is this villains motivation?: </label>
+                            <input id="obstacleObjectMotivation" name="obstacleObjectMotivation" type="text" required onChange={handleChangeOOM}/>
+                            <p className="examples">E.g. ever being found, revealing their plan</p>
+                        </div>
+                        <div className="buttonWrap">
+                            <button className="submitPromptButton" type="submit">
+                            Submit
+                            </button>
+                        </div>
+                    </form>
+                </div>
             </div>
-
-            <div className="formDiv">
-                <form className="" onSubmit={handleSubmitAR}>
-                    <label htmlFor="activityReason">Activity Reason: </label>
-                    <input id="activityReason" name="activityReason" type="text" required onChange={handleChangeAR}/>
-                    <div className="">
-                        <button className="submitPromptButton" type="submit">
-                        Submit
-                        </button>
-                    </div>
-                </form>
-            </div>
-
-            <div className="formDiv">
-                <form className="" onSubmit={handleSubmitSLA}>
-                    <label htmlFor="specificLocationAdjective">Descriptive Word for Location: </label>
-                    <input id="specificLocationAdjective" name="specificLocationAdjective" type="text" required onChange={handleChangeSLA}/>
-                    <div className="">
-                        <button className="submitPromptButton" type="submit">
-                        Submit
-                        </button>
-                    </div>
-                </form>
-            </div>
-
-            <div className="formDiv">
-                <form className="" onSubmit={handleSubmitSL}>
-                <label htmlFor="specificLocation">A more specific Location: </label>
-                <input id="specificLocation" name="specificLocation" type="text" required onChange={handleChangeSL}/>
-                    <div className="">
-                        <button className="submitPromptButton" type="submit">
-                        Submit
-                        </button>
-                    </div>
-                </form>
-            </div>
-
-
-            <form className="" onSubmit={handleSubmitSCS}>
-
-                <label htmlFor="specificCharacterState">Characters emotional/physical state: </label>
-                <input id="specificCharacterState" name="specificCharacterState" type="text" required onChange={handleChangeSCS}/>
-                <div className="">
-                    <button className="submitPromptButton" type="submit">
-                    Submit
-                    </button>
-                </div>
-            </form>
-
-            <form className="" onSubmit={handleSubmitTA}>
-
-                <label htmlFor="taskAction">What is your Quests Action?: </label>
-                <input id="taskAction" name="taskAction" type="text" required onChange={handleChangeTA}/>
-                <div className="">
-                    <button className="submitPromptButton" type="submit">
-                    Submit
-                    </button>
-                </div>
-            </form>
-
-            <form className="" onSubmit={handleSubmitTO}>
-
-                <label htmlFor="taskObject">What is the Object of your Quest?: </label>
-                <input id="taskObject" name="taskObject" type="text" required onChange={handleChangeTO}/>
-                <div className="">
-                    <button className="submitPromptButton" type="submit">
-                    Submit
-                    </button>
-                </div>
-            </form>
-
-            <form className="" onSubmit={handleSubmitSGA}>
-
-                <label htmlFor="specificGoalAction">Verb for your overall Goal: </label>
-                <input id="specificGoalAction" name="specificGoalAction" type="text" required onChange={handleChangeSGA}/>
-                <div className="">
-                    <button className="submitPromptButton" type="submit">
-                    Submit
-                    </button>
-                </div>
-            </form>
-
-            <form className="" onSubmit={handleSubmitSGO}>
-
-                <label htmlFor="specificGoalObject">Object of your overall Goal: </label>
-                <input id="specificGoalObject" name="specificGoalObject" type="text" required onChange={handleChangeSGO}/>
-                <div className="">
-                    <button className="submitPromptButton" type="submit">
-                    Submit
-                    </button>
-                </div>
-            </form>
-
-            <form className="" onSubmit={handleSubmitOO}>
-
-                <label htmlFor="obstacleObject">Who is against your goal?: </label>
-                <input id="obstacleObject" name="obstacleObject" type="text" required onChange={handleChangeOO}/>
-                <div className="">
-                    <button className="submitPromptButton" type="submit">
-                    Submit
-                    </button>
-                </div>
-            </form>
-
-            <form className="" onSubmit={handleSubmitOOM}>
-
-                <label htmlFor="obstacleObjectMotivation">What is this villains motivation?: </label>
-                <input id="obstacleObjectMotivation" name="obstacleObjectMotivation" type="text" required onChange={handleChangeOOM}/>
-                <div className="">
-                    <button className="submitPromptButton" type="submit">
-                    Submit
-                    </button>
-                </div>
-            </form>
         </div>
     )
 }
