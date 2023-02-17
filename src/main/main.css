@@ -1,13 +1,23 @@
+.mainDiv {
+    display: grid;
+    justify-items: center;
+}
+
 .mainWrapper {
     display: grid;
-    grid-template-rows: 5rem 150px 2rem;
+    grid-template-rows: 2rem 150px 3rem;
     gap: 1rem;
     place-items: center;
     padding: 1rem 0 0 0;
+    width: 600px;
+    padding: 30px 30px 30px 30px;
+    margin: 20px 20px 20px 20px;
+    backdrop-filter: blur(2px); 
+    border-radius: 50px;
 }
 
 .mainWrapper > div > h2 {
-    padding-bottom: 1rem;
+    /* padding-bottom: 1rem; */
     font-family: Poppins;
     font-size: 2rem;
 }
@@ -16,10 +26,31 @@
     text-align: center;
 }
 
+.mainButton {
+    background-color: #00000044;
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    border-radius: 10px;
+    margin: 0 0 10px 0;
+}
+
+.mainButton:active {
+    background-color: black;
+    font-size: 80%;
+}
+
 span.italic {
     font-style: italic;
 }
 
 .questTextWrap {
     max-width: 500px;
+}
+
+.questTextWrap > p {
+    font-style: italic;
+    letter-spacing: 2px;
 }

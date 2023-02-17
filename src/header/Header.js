@@ -1,14 +1,17 @@
+import { useNavigate, Link } from "react-router-dom"
 import "./header.css"
 export default function Header() {
+    const navigate = useNavigate()
+
     return (
         <div className="headerWrapper">
             <nav className="headerNav">
                 <ul className="headerUL">
                     <li>
-                        <p>Home</p>
+                        <Link className="headerLink" to={`/`}>Home</Link>
                     </li>
                     <li>
-                        <p>Menu</p>
+                        <Link className="headerLink" to={`/prompts`}>Prompts</Link>
                     </li>
                 </ul>
             </nav>

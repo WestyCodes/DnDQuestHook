@@ -191,81 +191,92 @@ export default function PromptsPage() {
         <div>
             <h2>Add some prompts</h2>
 
-            <form className="" onSubmit={handleSubmitLN}>
-                <label htmlFor="locationName">A Fantastical Name: </label>
-                <input id="locationName" name="locationName" type="text" required  onChange={handleChangeLN}/>
-                <div className="">
-                    <button className="submitPromptButton" type="submit">
-                    Submit
-                    </button>
-                </div>
-            </form>
+            <div className="formDiv">
+                <form className="" onSubmit={handleSubmitLN}>
+                    <label htmlFor="locationName">A Fantastical Name: </label>
+                    <input id="locationName" name="locationName" type="text" required  onChange={handleChangeLN}/>
+                    <div className="">
+                        <button className="submitPromptButton" type="submit">
+                        Submit
+                        </button>
+                    </div>
+                </form>
+            </div>
 
-            <form className="" onSubmit={handleSubmitBL}>
-                <label htmlFor="broadLocations">A Broad Location: </label>
-                <input id="broadLocations" name="broadLocations" type="text" required  onChange={handleChangeBL}/>
-                <div className="">
-                    <button className="submitPromptButton" type="submit">
-                    Submit
-                    </button>
-                </div>
-            </form>
+            <div className="formDiv">
+                <form className="" onSubmit={handleSubmitBL}>
+                    <label htmlFor="broadLocations">A Broad Location: </label>
+                    <input id="broadLocations" name="broadLocations" type="text" required  onChange={handleChangeBL}/>
+                    <div className="">
+                        <button className="submitPromptButton" type="submit">
+                        Submit
+                        </button>
+                    </div>
+                </form>
+            </div>
 
-            <form className="" onSubmit={handleSubmitRD}>
+            <div className="formDiv">
+                <form className="" onSubmit={handleSubmitRD}>
 
-                <label htmlFor="raceDescription">General Emotion: </label>
-                <input id="raceDescription" name="raceDescription" type="text" required onChange={handleChangeRD}/>
-                <div className="">
-                    <button className="submitPromptButton" type="submit">
-                    Submit
-                    </button>
-                </div>
-            </form>
+                    <label htmlFor="raceDescription">General Emotion: </label>
+                    <input id="raceDescription" name="raceDescription" type="text" required onChange={handleChangeRD}/>
+                    <div className="">
+                        <button className="submitPromptButton" type="submit">
+                        Submit
+                        </button>
+                    </div>
+                </form>
+            </div>
 
-            <form className="" onSubmit={handleSubmitCA}>
+            <div className="formDiv">
+                <form className="" onSubmit={handleSubmitCA}>
+                    <label htmlFor="cultureActivity">Culture Activity: </label>
+                    <input id="cultureActivity" name="cultureActivity" type="text" required onChange={handleChangeCA}/>
+                    <div className="">
+                        <button className="submitPromptButton" type="submit">
+                        Submit
+                        </button>
+                    </div>
+                </form>
+                
+            </div>
 
-                <label htmlFor="cultureActivity">Culture Activity: </label>
-                <input id="cultureActivity" name="cultureActivity" type="text" required onChange={handleChangeCA}/>
-                <div className="">
-                    <button className="submitPromptButton" type="submit">
-                    Submit
-                    </button>
-                </div>
-            </form>
+            <div className="formDiv">
+                <form className="" onSubmit={handleSubmitAR}>
+                    <label htmlFor="activityReason">Activity Reason: </label>
+                    <input id="activityReason" name="activityReason" type="text" required onChange={handleChangeAR}/>
+                    <div className="">
+                        <button className="submitPromptButton" type="submit">
+                        Submit
+                        </button>
+                    </div>
+                </form>
+            </div>
 
-            <form className="" onSubmit={handleSubmitAR}>
+            <div className="formDiv">
+                <form className="" onSubmit={handleSubmitSLA}>
+                    <label htmlFor="specificLocationAdjective">Descriptive Word for Location: </label>
+                    <input id="specificLocationAdjective" name="specificLocationAdjective" type="text" required onChange={handleChangeSLA}/>
+                    <div className="">
+                        <button className="submitPromptButton" type="submit">
+                        Submit
+                        </button>
+                    </div>
+                </form>
+            </div>
 
-                <label htmlFor="activityReason">Activity Reason: </label>
-                <input id="activityReason" name="activityReason" type="text" required onChange={handleChangeAR}/>
-                <div className="">
-                    <button className="submitPromptButton" type="submit">
-                    Submit
-                    </button>
-                </div>
-            </form>
+            <div className="formDiv">
+                <form className="" onSubmit={handleSubmitSL}>
+                <label htmlFor="specificLocation">A more specific Location: </label>
+                <input id="specificLocation" name="specificLocation" type="text" required onChange={handleChangeSL}/>
+                    <div className="">
+                        <button className="submitPromptButton" type="submit">
+                        Submit
+                        </button>
+                    </div>
+                </form>
+            </div>
 
-
-            <form className="" onSubmit={handleSubmitSLA}>
-
-                <label htmlFor="specificLocationAdjective">Descriptive Word for Location: </label>
-                <input id="specificLocationAdjective" name="specificLocationAdjective" type="text" required onChange={handleChangeSLA}/>
-                <div className="">
-                    <button className="submitPromptButton" type="submit">
-                    Submit
-                    </button>
-                </div>
-            </form>
-
-            <form className="" onSubmit={handleSubmitSL}>
-
-            <label htmlFor="specificLocation">A more specific Location: </label>
-            <input id="specificLocation" name="specificLocation" type="text" required onChange={handleChangeSL}/>
-                <div className="">
-                    <button className="submitPromptButton" type="submit">
-                    Submit
-                    </button>
-                </div>
-            </form>
 
             <form className="" onSubmit={handleSubmitSCS}>
 

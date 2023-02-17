@@ -91,7 +91,7 @@ export default function Main() {
         quest.antagonistObject = obstacleObject[Math.floor(Math.random()*obstacleObject.length)].title
         quest.antagonistMotivation = obstacleObjectsMotivation[Math.floor(Math.random()*obstacleObjectsMotivation.length)].title
 
-        if(quest.mainLocation === "Cliffs" || quest.mainLocation === "Shores" || quest.mainLocation === "Sea" || quest.mainLocation === "Ocean" || quest.mainLocation === "Plains") {
+        if(quest.mainLocation === "Cliffs" || quest.mainLocation === "Shores" || quest.mainLocation === "Sea" || quest.mainLocation === "Ocean" || quest.mainLocation === "Plains" || quest.mainLocation === "Island") {
             quest.startingPhrase = "On the"
         } else {
             quest.startingPhrase = "In the"
@@ -103,23 +103,23 @@ export default function Main() {
 
 
     return (
-
-        <div className='mainWrapper'>
-            <div>
-                <h2>TTRPG Random Quest Prompt</h2>
-                <p>Get some <span className='italic'>inspiration</span> for your next adventure!</p>
-            </div>
-            {loadQuest && (
-                <div className='questTextWrap'>
-                    <p>
-                        {questText.startingPhrase} {questText.mainName} {questText.mainLocation}, where {questText.inhabitantsDescription} {questText.inhabitants} {questText.culture} {questText.cultureReason}, 
-                        you find yourself in {questText.pcLocationAdj} {questText.pcLocation}, {questText.pcMood1} and {questText.pcMood2}. 
-                        You must {questText.questAction} the {questText.questObject} in order to {questText.goalAction} {questText.goalObject}.
-                        However, the {questText.antagonistObject} would object to the {questText.questObject} {questText.antagonistMotivation}!
-                    </p>
+        <div className='mainDiv'>
+            <div className='mainWrapper'>
+                <div>
+                    <h2>TTRPG Random Quest Prompt</h2>
                 </div>
-            )}
-            {loadingAPI ? (<p className='loading'>Loading...</p>) : (<button onClick={(randomiseQuest)}>{loadQuest ? `That sucks... do it again!`: `Generate Me A Quest!`}</button>)}
+                {loadQuest ? (
+                    <div className='questTextWrap'>
+                        <p>
+                            {questText.startingPhrase} {questText.mainName} {questText.mainLocation}, where {questText.inhabitantsDescription} {questText.inhabitants} {questText.culture} {questText.cultureReason}, 
+                            you find yourself in {questText.pcLocationAdj} {questText.pcLocation}, {questText.pcMood1} and {questText.pcMood2}. 
+                            You must {questText.questAction} the {questText.questObject} in order to {questText.goalAction} {questText.goalObject}.
+                            However, the {questText.antagonistObject} would object to the {questText.questObject} {questText.antagonistMotivation}!
+                        </p>
+                    </div>
+                ) : <p>Get some <span className='italic'>inspiration</span> for your next adventure!</p>}
+                {loadingAPI ? (<p className='loading'>Loading...</p>) : (<button className="mainButton" onClick={(randomiseQuest)}>{loadQuest ? `${questText.inhabitants} are DUMB! Do it again!`: `Generate Me A Quest!`}</button>)}
+            </div>
         </div>
     )
 }
