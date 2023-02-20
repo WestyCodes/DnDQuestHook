@@ -151,6 +151,14 @@
     {
       "title": "Deathhallow",
       "id": 38
+    },
+    {
+      "title": "Cadia",
+      "id": 39
+    },
+    {
+      "title": "Crystalline",
+      "id": 40
     }
   ],
   "broadLocations": [
@@ -249,6 +257,10 @@
     {
       "title": "Mines",
       "id": 24
+    },
+    {
+      "title": "Atolls",
+      "id": 25
     }
   ],
   "races": [
@@ -593,6 +605,10 @@
     {
       "title": "deceitful",
       "id": 47
+    },
+    {
+      "title": "relaxed",
+      "id": 48
     }
   ],
   "cultureActivity": [
@@ -687,6 +703,14 @@
     {
       "title": "paint landscapes",
       "id": 23
+    },
+    {
+      "title": "cow tip",
+      "id": 24
+    },
+    {
+      "title": "research old magic",
+      "id": 25
     }
   ],
   "activityReason": [
@@ -777,6 +801,14 @@
     {
       "title": "to impress their Lord",
       "id": 22
+    },
+    {
+      "title": "to amuse themselves",
+      "id": 23
+    },
+    {
+      "title": "to honour their gods",
+      "id": 24
     }
   ],
   "specificLocationAdjective": [
@@ -863,6 +895,14 @@
     {
       "title": "a monolithic",
       "id": 21
+    },
+    {
+      "title": "a fishy smelling",
+      "id": 22
+    },
+    {
+      "title": "a cramped",
+      "id": 23
     }
   ],
   "specificLocation": [
@@ -949,6 +989,14 @@
     {
       "title": "pantry",
       "id": 21
+    },
+    {
+      "title": "harbour",
+      "id": 22
+    },
+    {
+      "title": "armoury",
+      "id": 23
     }
   ],
   "specificCharacterState": [
@@ -1035,6 +1083,14 @@
     {
       "title": "grumpy",
       "id": 21
+    },
+    {
+      "title": "promiscuous",
+      "id": 22
+    },
+    {
+      "title": "drunk",
+      "id": 23
     }
   ],
   "taskAction": [
@@ -1109,6 +1165,10 @@
     {
       "title": "reach",
       "id": 18
+    },
+    {
+      "title": "deceive",
+      "id": 19
     }
   ],
   "taskObject": [
@@ -1247,6 +1307,34 @@
     {
       "title": "Bard known only as \"Puzzles\"",
       "id": 34
+    },
+    {
+      "title": "Fisher King",
+      "id": 35
+    },
+    {
+      "title": "King Under the Mountain",
+      "id": 36
+    },
+    {
+      "title": "Necromancer's Apprentice",
+      "id": 37
+    },
+    {
+      "title": "Kel'thuzad",
+      "id": 38
+    },
+    {
+      "title": "Grand Duke",
+      "id": 39
+    },
+    {
+      "title": "Ashen Warrior",
+      "id": 40
+    },
+    {
+      "title": "Holy Incarnate",
+      "id": 41
     }
   ],
   "specificGoalAction": [
@@ -1281,6 +1369,26 @@
     {
       "title": "acquire",
       "id": 8
+    },
+    {
+      "title": "dominate",
+      "id": 9
+    },
+    {
+      "title": "uncover",
+      "id": 10
+    },
+    {
+      "title": "track",
+      "id": 11
+    },
+    {
+      "title": "reclaim",
+      "id": 12
+    },
+    {
+      "title": "quell",
+      "id": 13
     }
   ],
   "specificGoalObject": [
@@ -1343,6 +1451,14 @@
     {
       "title": "your mother",
       "id": 15
+    },
+    {
+      "title": "the Magic",
+      "id": 16
+    },
+    {
+      "title": "the souls of the Lost",
+      "id": 17
     }
   ],
   "obstacleObject": [
@@ -1389,6 +1505,14 @@
     {
       "title": "Queen's guard",
       "id": 11
+    },
+    {
+      "title": "Keepers",
+      "id": 12
+    },
+    {
+      "title": "Grand Lich",
+      "id": 13
     }
   ],
   "obstacleObjectsMotivation": [
@@ -1435,6 +1559,14 @@
     {
       "title": "being seen",
       "id": 9
+    },
+    {
+      "title": "disrupting the status quo",
+      "id": 12
+    },
+    {
+      "title": "causing unnecessary distress to the public",
+      "id": 13
     }
   ]
 }

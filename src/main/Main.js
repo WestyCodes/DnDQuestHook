@@ -116,8 +116,8 @@ export default function Main( {setNumberOfQuests} ) {
                 {loadQuest ? (
                     <div className='questTextWrap'>
                         <p>
-                            {questText.startingPhrase} {questText.mainName} {questText.mainLocation}, where {questText.inhabitantsDescription} {questText.inhabitants} {questText.culture} {questText.cultureReason}, 
-                            you find yourself in {questText.pcLocationAdj} {questText.pcLocation}, {questText.pcMood1} and {questText.pcMood2}. 
+                            {questText.startingPhrase} {questText.mainName} {questText.mainLocation}, where {questText.inhabitantsDescription} {questText.inhabitants} {questText.culture} {questText.cultureReason}. 
+                            You find yourself in {questText.pcLocationAdj} {questText.pcLocation}, {questText.pcMood1} and {questText.pcMood2}. 
                             You must {questText.questAction} the {questText.questObject} in order to {questText.goalAction} {questText.goalObject}.
                             However, the {questText.antagonistObject} would object to the {questText.questObject} {questText.antagonistMotivation}!
                         </p>

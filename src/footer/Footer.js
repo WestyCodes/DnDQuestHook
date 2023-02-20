@@ -1,7 +1,6 @@
 import './footer.css'
 
 export default function Footer({numberOfQuests}) {
-    console.log(numberOfQuests)
     return (
         <div className="footerBar">
             <div className='credit'>
