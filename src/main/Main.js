@@ -98,14 +98,16 @@ export default function Main( {setNumberOfQuests} ) {
         }
 
         setQuestText(quest)
-        setLoadQuest(true)
+        setLoadQuest(true)   
     }
 
-    const howManyQuests = () => {
+    useEffect(() => {
         const res = locationName.length * broadLocations.length * raceDescription.length * races.length * cultureActivity.length * activityReason.length * specificLocationAdjective.length * specificLocation.length * specificCharacterState.length * (specificCharacterState.length - 1) * taskAction.length * taskObject.length * specificGoalAction.length * specificGoalObject.length * obstacleObject.length * obstacleObjectsMotivation.length
         setNumberOfQuests(res)
-    }
-    howManyQuests()
+    }, [loadingAPI])
+
+    
+
 
     return (
         <div className='mainDiv'>

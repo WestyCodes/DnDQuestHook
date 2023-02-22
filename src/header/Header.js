@@ -11,7 +11,10 @@ export default function Header() {
                         <Link className="headerLink" to={`/`}>Home</Link>
                     </li>
                     <li>
-                        <Link className="headerLink" to={`/prompts`}>Prompts</Link>
+                        <Link className="headerLink" to={`/prompts`}>Add Prompts</Link>
+                    </li>
+                    <li>
+                        <Link className="headerLink" to={`/saved`}>Saved Prompts</Link>
                     </li>
                 </ul>
             </nav>

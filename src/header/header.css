@@ -5,7 +5,7 @@
 .headerUL {
     list-style: none;
     display: grid;
-    grid-template-columns: 7rem 7rem;
+    grid-template-columns: 8rem 9rem 9rem;
     height: 4rem;
     gap: 30px;
     place-items: center;
