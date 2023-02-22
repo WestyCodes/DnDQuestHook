@@ -9,7 +9,7 @@
     gap: 1rem;
     place-items: center;
     padding: 1rem 0 0 0;
-    width: 600px;
+    width: 700px;
     padding: 30px 30px 30px 30px;
     margin: 20px 20px 20px 20px;
     backdrop-filter: blur(3px); 
@@ -34,7 +34,7 @@
     text-align: center;
     text-decoration: none;
     border-radius: 10px;
-    margin: 0 0 10px 0;
+    margin: 0 10px 10px 0;
 }
 
 .mainButton:hover {
@@ -51,7 +51,7 @@ span.italic {
 }
 
 .questTextWrap {
-    max-width: 500px;
+    max-width: 600px;
 }
 
 .questTextWrap > p {

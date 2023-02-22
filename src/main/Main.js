@@ -123,7 +123,12 @@ export default function Main( {setNumberOfQuests} ) {
                         </p>
                     </div>
                 ) : <p>Get some <span className='italic'>inspiration</span> for your next adventure!</p>}
-                {loadingAPI ? (<p className='loading'>Loading...</p>) : (<button className="mainButton" onClick={(randomiseQuest)}>{loadQuest ? `${questText.inhabitants} are DUMB! Do it again!`: `Generate Me A Quest!`}</button>)}
+                {loadingAPI ? (<p className='loading'>Loading...</p>) : (
+                    <div>
+                        <button className="mainButton" onClick={(randomiseQuest)}>{loadQuest ? `${questText.inhabitants} are DUMB! Do it again!`: `Generate Me A Quest!`}</button>
+                        {loadQuest && <button className="mainButton">{`Save this fable about ${questText.inhabitants}!`}</button>}
+                    </div>
+                )}
             </div>
         </div>
     )
