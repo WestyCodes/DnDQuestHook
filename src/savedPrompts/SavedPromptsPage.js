@@ -1,7 +1,7 @@
 export default function SavedPromptsPage() {
     return (
         <div>
-            <p>Nothing to see here.</p>
+            <p>Coming soon!</p>
         </div>
-    )
+    );
 }
